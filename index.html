@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SkillNaija – Learn skills that pay</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#" data-go="web:home">Skill<b>Naija</b></a>
+  <div class="areas" role="group" aria-label="Site area">
+    <button data-area="web" aria-pressed="true">Website</button>
+    <button data-area="learner" aria-pressed="false">Learner area</button>
+    <button data-area="admin" aria-pressed="false">Admin area</button>
+  </div>
+  <nav class="main" id="mainnav" aria-label="Main"></nav>
+</div></header>
+
+<main>
+<!-- PUBLIC WEBSITE -->
+<div id="web">
+<section class="pg" id="web-home">
+  <div class="hero"><div class="wrap row">
+    <div><h1>Learn a skill. Earn a living.</h1>
+    <p>Practical, project-based courses built for Nigerian learners. Study on your phone, at your pace, and finish with a certificate employers recognise.</p>
+    <p><a class="btn" data-go="web:register">Create free account</a> &nbsp; <a class="btn alt" data-go="web:courses">Browse courses</a></p></div>
+    <div class="stack" aria-label="Popular courses">
+      <div>Web Development <span>12 weeks</span></div><div>Graphic Design <span>8 weeks</span></div>
+      <div>Data Analysis <span>10 weeks</span></div><div>Digital Marketing <span>6 weeks</span></div></div>
+  </div></div>
+  <div class="wrap" style="padding-top:44px"><h2>Start with a category</h2><div class="grid" data-courses></div></div>
+</section>
+
+<section class="pg" id="web-about"><div class="wrap split">
+  <div><h1 style="font-size:2.6rem">About SkillNaija</h1>
+  <p>SkillNaija is an online learning platform that helps Nigerians pick up in-demand digital skills without leaving home.</p>
+  <p>Every course is taught through short lessons, hands-on projects and feedback from instructors. Finish a course and you receive a certificate you can add to your CV.</p></div>
+  <div class="grid" style="grid-template-columns:1fr 1fr"><div class="card"><h3>4</h3><p>course categories</p></div><div class="card"><h3>Self-paced</h3><p>learn any time</p></div><div class="card"><h3>Projects</h3><p>build a real portfolio</p></div><div class="card"><h3>Certificates</h3><p>on every completed course</p></div></div>
+</div></section>
+
+<section class="pg" id="web-courses"><div class="wrap"><h1 style="font-size:2.6rem">Courses</h1><div class="grid" data-courses></div></div></section>
+
+<section class="pg" id="web-coursedetails"><div class="wrap split">
+  <div><span class="tag" id="cd-tag"></span><h1 id="cd-title" style="font-size:2.6rem;margin-top:10px"></h1><p id="cd-desc"></p>
+  <h3>What you will learn</h3><ul id="cd-list"></ul></div>
+  <div class="card"><h3 id="cd-price"></h3><p id="cd-meta"></p><a class="btn dark" data-go="web:register">Enrol now</a></div>
+</div></section>
+
+<section class="pg" id="web-contact"><div class="wrap split">
+  <div><h1 style="font-size:2.6rem">Contact us</h1><p>Questions about a course or payment? Send a message and we reply within one working day.</p><p>hello@skillnaija.example<br>Mon–Fri, 9am–5pm WAT</p></div>
+  <form data-toast="Message sent. We will reply soon."><label>Full name<input required></label><label>Email<input type="email" required></label><label>Message<textarea rows="4" required></textarea></label><button class="btn dark">Send message</button></form>
+</div></section>
+
+<section class="pg" id="web-register"><div class="wrap center"><h1 style="font-size:2.4rem">Create your account</h1>
+  <form data-go-submit="learner:dashboard" data-toast="Welcome to SkillNaija!"><label>Full name<input required></label><label>Email<input type="email" required></label><label>Password<input type="password" minlength="6" required></label><label>I want to learn<select><option>Web Development</option><option>Graphic Design</option><option>Data Analysis</option><option>Digital Marketing</option></select></label><button class="btn dark">Register</button></form>
+  <p>Already registered? <a data-go="web:login" style="color:var(--green);font-weight:700;cursor:pointer">Log in</a></p></div></section>
+
+<section class="pg" id="web-login"><div class="wrap center"><h1 style="font-size:2.4rem">Log in</h1>
+  <form data-go-submit="learner:dashboard" data-toast="Logged in"><label>Email<input type="email" required></label><label>Password<input type="password" required></label><button class="btn dark">Log in</button></form>
+  <p>New here? <a data-go="web:register" style="color:var(--green);font-weight:700;cursor:pointer">Create an account</a></p></div></section>
+<div class="foot"><div class="wrap">© 2026 SkillNaija. Learn skills that pay.</div></div>
+</div>
+
+<!-- LEARNER AREA -->
+<div class="shell" id="learner"><aside id="learner-side" aria-label="Learner menu"></aside><div class="app">
+<section class="pg" id="learner-dashboard"><h2>Welcome back, Ada</h2>
+  <div class="stats"><div class="card stat"><b>3</b><span>Courses enrolled</span></div><div class="card stat"><b>62%</b><span>Average progress</span></div><div class="card stat"><b>1</b><span>Certificate earned</span></div></div>
+  <div class="card"><h3>Continue learning</h3><p>Web Development · Lesson 14: CSS Flexbox</p><div class="bar"><i style="width:58%"></i></div><a class="btn dark" data-go="learner:learning">Resume lesson</a></div></section>
+<section class="pg" id="learner-mycourses"><h2>My courses</h2><div class="grid" data-mycourses></div></section>
+<section class="pg" id="learner-coursedetails"><h2>Web Development</h2><div class="card"><p>12 weeks · 24 lessons · 58% complete</p><div class="bar"><i style="width:58%"></i></div>
+  <ol><li>HTML basics ✓</li><li>CSS layouts ✓</li><li>JavaScript essentials</li><li>Build a portfolio site</li></ol><a class="btn dark" data-go="learner:learning">Open learning page</a></div></section>
+<section class="pg" id="learner-learning"><h2>Lesson 14: CSS Flexbox</h2><div class="lesson"><div><div class="video" aria-label="Video player">▶</div><p>Learn how to line up and space items in a row or column using flex containers.</p><a class="btn dark" data-toast="Lesson marked complete">Mark complete</a></div>
+  <div class="card"><h3>Up next</h3><p>Lesson 15: CSS Grid<br>Lesson 16: Responsive design<br>Quiz 4</p></div></div></section>
+<section class="pg" id="learner-certificates"><h2>Certificates</h2><div class="card" style="max-width:460px;border:3px double var(--gold)"><span class="tag">Certificate</span><h3 style="margin-top:12px">Digital Marketing Fundamentals</h3><p>Awarded to Ada Okafor</p><a class="btn dark" data-toast="Certificate downloaded">Download</a></div></section>
+<section class="pg" id="learner-profile"><h2>Profile</h2><form data-toast="Profile saved"><label>Full name<input value="Ada Okafor"></label><label>Email<input type="email" value="ada@example.com"></label><label>Location<input value="Warri, Delta"></label><button class="btn dark">Save changes</button></form></section>
+<section class="pg" id="learner-messages"><h2>Messages</h2><div class="card" style="padding:0"><div class="msg"><b>Instructor Tunde</b><br>Great work on your last project. Check my notes.<br><small>Today</small></div><div class="msg"><b>SkillNaija Support</b><br>Your payment was received.<br><small>Yesterday</small></div></div></section>
+<section class="pg" id="learner-settings"><h2>Settings</h2><form data-toast="Settings saved"><label>Language<select><option>English</option><option>Pidgin</option></select></label><label>Email notifications<select><option>All updates</option><option>Important only</option></select></label><button class="btn dark">Save settings</button></form></section>
+</div></div>
+
+<!-- ADMIN AREA -->
+<div id="adminlogin" style="display:none"><section class="pg" id="admin-login"><div class="wrap center"><h1 style="font-size:2.4rem">Admin login</h1>
+  <form data-go-submit="admin:dashboard" data-toast="Signed in as admin"><label>Admin email<input type="email" required></label><label>Password<input type="password" required></label><button class="btn dark">Sign in</button></form></div></section></div>
+<div class="shell" id="admin"><aside id="admin-side" aria-label="Admin menu"></aside><div class="app">
+<section class="pg" id="admin-dashboard"><h2>Dashboard</h2>
+  <div class="stats"><div class="card stat"><b>1,284</b><span>Learners</span></div><div class="card stat"><b>4</b><span>Courses</span></div><div class="card stat"><b>932</b><span>Enrollments</span></div><div class="card stat"><b>₦4.8m</b><span>Revenue</span></div></div>
+  <div class="card"><h3>Enrollments this week</h3><div class="chart"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:70%"></i><i style="height:45%"></i><i style="height:60%"></i></div></div></section>
+<section class="pg" id="admin-users"><h2>Users</h2><div class="tbl"><table><tr><th>Name</th><th>Email</th><th>Role</th></tr><tr><td>Ada Okafor</td><td>ada@example.com</td><td>Learner</td></tr><tr><td>Emeka Obi</td><td>emeka@example.com</td><td>Learner</td></tr><tr><td>Tunde Bello</td><td>tunde@example.com</td><td>Instructor</td></tr></table></div></section>
+<section class="pg" id="admin-courses"><h2>Courses</h2><div class="tbl"><table id="ct"><tr><th>Course</th><th>Price</th><th>Duration</th></tr></table></div><p><a class="btn dark" data-toast="Course form coming soon">Add course</a></p></section>
+<section class="pg" id="admin-enrollments"><h2>Enrollments</h2><div class="tbl"><table><tr><th>Learner</th><th>Course</th><th>Status</th></tr><tr><td>Ada Okafor</td><td>Web Development</td><td>Active</td></tr><tr><td>Emeka Obi</td><td>Data Analysis</td><td>Active</td></tr><tr><td>Zainab Musa</td><td>Graphic Design</td><td>Completed</td></tr></table></div></section>
+<section class="pg" id="admin-transactions"><h2>Transactions</h2><div class="tbl"><table><tr><th>Reference</th><th>Learner</th><th>Amount</th><th>Status</th></tr><tr><td>TX-1042</td><td>Ada Okafor</td><td>₦45,000</td><td>Paid</td></tr><tr><td>TX-1043</td><td>Emeka Obi</td><td>₦38,000</td><td>Paid</td></tr><tr><td>TX-1044</td><td>Zainab Musa</td><td>₦30,000</td><td>Pending</td></tr></table></div></section>
+<section class="pg" id="admin-reports"><h2>Reports</h2><div class="grid"><div class="card"><h3>Enrollment report</h3><p>Sign-ups by course and month.</p><a class="btn dark" data-toast="Report downloaded">Download</a></div><div class="card"><h3>Revenue report</h3><p>Payments received per month.</p><a class="btn dark" data-toast="Report downloaded">Download</a></div></div></section>
+<section class="pg" id="admin-settings"><h2>Settings</h2><form data-toast="Settings saved"><label>Site name<input value="SkillNaija"></label><label>Currency<select><option>Naira (₦)</option></select></label><button class="btn dark">Save changes</button></form></section>
+</div></div>
+</main>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
